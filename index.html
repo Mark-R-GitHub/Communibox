@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <title>SMToolbox</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <script src="https://use.fortawesome.com/25e3467f.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+    <div id="wrapper">
+
+        <div id="sidebar">
+        <a href="#" class="sidebar-tab" id="menu-toggle"><i id="btn-angle" class="fa fa-angle-right fa-4x"></i></a>
+        <div id="sidebar-wrapper" class="hidden">
+            <p class="nav-heading">SMToolbox<sup>&alpha;</sup></p>
+            <ul class="sidebar-nav">
+                <li><a href="#" id="ctb-menu-toggle"><i class="fa fa-wrench"></i> Change Toolbox <i id="angle" class="fa fa-angle-down"></i></a></li>
+                <i id="ctb-nav" class="ctb-toggled">
+                    <li><a href="#"><i class="fa fa-code"></i> Developer/Admin Tools</a></li>
+                    <li><a href="#"><i class="fa fa-gamepad"></i> EVE Tools</a></li>
+                    <li><a href="#"><i class="fa fa-server"></i> Server Management</a></li>
+                </i>
+            </ul>
+            <i class="user-access-box">
+                <div class="uab-content">
+                    <i class="propic"></i>
+                    <h3>Minimal</h3>
+                    <h4 class="role">Developer</h4>
+                    <button type="button" class="sidebar-button" data-toggle="modal" data-target="#settingsModal"><i class="fa fa-cog"></i> Settings</button>
+                    <button type="button" class="sidebar-button" data-toggle="modal" data-target="#logoutModal"><i class="fa fa-sign-out"></i> Logout</button>
+                </div>
+            </i>
+        </div>
+        </div>
+
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+
+                <div id="view1Modal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">View details for Miner 1</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>ID: 1<br>Name: Minimal<br>Profit So Far: 14,800,000 ISK</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4">
+                            <div class="jumbotron mining">
+                                <h1>Miner Management</h1>
+                                <table>
+                                    <tr>
+                                        <td>ID</td>
+                                        <td>Pilot</td>
+                                        <td>PSF <i class="fa fa-info-circle"></i></td>
+                                        <td>Actions</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Minimal</td>
+                                        <td>14,800,000 ISK</td>
+                                        <td>
+                                            <button type="button" class="table-button" data-toggle="modal" data-target="#view1Modal"><i class="fa fa-search"></i> View</button>
+                                            <button type="button" class="table-button secondary" data-toggle="modal" data-target="delete1Modal"><i class="fa fa-times"></i> Delete</button>
+                                            <button type="button" class="table-button" data-toggle="modal" data-target="edit1Modal"><i class="fa fa-pencil"></i> Edit</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Sava</td>
+                                        <td>69,133,700 ISK</td>
+                                        <td>
+                                            <button type="button" class="table-button secondary" data-toggle="modal" data-target="view2Modal"><i class="fa fa-search"></i> View</button>
+                                            <button type="button" class="table-button" data-toggle="modal" data-target="delete2Modal"><i class="fa fa-times"></i> Delete</button>
+                                            <button type="button" class="table-button secondary" data-toggle="modal" data-target="edit2Modal"><i class="fa fa-pencil"></i> Edit</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="jumbotron wallets">
+                                <h1>Corporation Wallets</h1>
+                                <p>To be added</p>
+                            </div>
+                    </div>
+                    <div class="col-lg-4">
+                            <div class="jumbotron fighting">
+                                <h1>Fighter Management</h1>
+                                <p>To be added</p>
+                            </div>
+                    </div>
+                    <div class="col-lg-4">
+                            <div class="jumbotron trips">
+                                <h1>Trips Management</h1>
+                                <p>To be added</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var i = 0;
+        var x = 0;
+
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+            $("#menu-toggle").toggleClass("btn-active");
+            $("#btn-angle").toggleClass("fa-angle-right fa-angle-left");
+
+            if(i == 1)
+            {
+                $("#wrapper").toggleClass("toggledrev");
+                //i = 0;
+            }
+            else
+            {
+                i = 1;
+            }
+
+            if(x == 1)
+            {
+                setTimeout(function() {$("#sidebar-wrapper").toggleClass("hidden")}, 500);
+                x = 0;
+            }
+            else
+            {
+                $("#sidebar-wrapper").toggleClass("hidden");
+                x = 1;
+            }
+
+        });
+
+        $("#ctb-menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#ctb-nav").toggleClass("ctb-toggled");
+            $("#angle").toggleClass("fa-angle-down fa-angle-up ctb-toggled");
+        })
+    </script>
+
+    </body>
+</html>

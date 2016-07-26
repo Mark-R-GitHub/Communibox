@@ -1,0 +1,424 @@
+/* Main init */
+h1, p
+{
+    font-family: Whitney;
+    color: white;
+}
+
+sup
+{
+    color: rgba(187, 255, 68, 1);
+    text-shadow: 2px 2px #79b23a;
+}
+
+html
+{
+    background-color: #45527f;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+body
+{
+    background-color: #45527f;
+}
+
+table
+{
+    width: 100%;
+    border: 2px solid white;
+    box-shadow: 10px 10px 40px -23px rgba(0,0,0,1);
+}
+
+td
+{
+    font-family: Whitney;
+    color: white;
+    padding: 0.5em;
+}
+
+table tr:nth-child(even)
+{
+    background-color: #5767a0;
+}
+
+table tr:nth-child(odd)
+{
+    background-color: #45527f;
+}
+
+.modal p, h4, button
+{
+    font-family: Whitney;
+    color: black;
+}
+
+.user-access-box
+{
+    background-color: #4e5f9c;
+    width: 15.5em;
+    height: 10em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-right: 2em;
+    padding-bottom: 10em;
+    font-style: normal;
+    font-family: Whitney !important;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+
+.uab-content
+{
+    margin-left: 1em;
+}
+
+.user-access-box h4
+{
+    margin-bottom: 0.75em;
+}
+
+.role
+{
+    color: #a3a2a2;
+}
+
+.propic
+{
+    width: 8em;
+    height: 8em;
+    border-radius: 100%;
+    background-color: white;
+    font-size: 4em;
+    font-style: normal;
+}
+
+/* Sidebar */
+#sidebar-wrapper
+{
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    overflow-y: hidden;
+    background: #7d93e5;
+    left: 0;
+    right: 0;
+}
+/* Rest of page */
+#page-content-wrapper
+{
+    width: 100%;
+    position: absolute;
+    padding: 0em;
+}
+
+.table-button
+{
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-bottom: 0.5em;
+    text-decoration: none;
+    color: white;
+    background-color: #6f7cb0;
+    border: 0;
+}
+
+.sidebar-button
+{
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-bottom: 0.5em;
+    margin: 0.2em;
+    text-decoration: none;
+    color: white;
+    background-color: #43507f;
+    border-radius: 1em;
+    border: 0;
+}
+
+.secondary
+{
+    background-color: #44517f;
+}
+
+.table-button:link
+{
+    color: white;
+    text-decoration: none;
+}
+
+.table-button:visited
+{
+    color: white;
+    text-decoration: none;
+}
+
+.table-button:hover
+{
+    color: white;
+    text-decoration: none;
+}
+
+.table-button:active
+{
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar-button:link
+{
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar-button:visited
+{
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar-button:hover
+{
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar-button:active
+{
+    color: white;
+    text-decoration: none;
+}
+
+.container-fluid
+{
+    padding-left: 0em
+}
+/* Toggle animations and button activity */
+.toggled #sidebar-wrapper
+{
+    animation-name: anim-sidebar;
+    animation-duration: 500ms;
+}
+
+.toggledrev #sidebar-wrapper
+{
+    animation-name: anim-sidebar-rev;
+    animation-duration: 500ms;
+}
+
+.toggled #menu-toggle
+{
+    animation-name: anim-sidebar-tab;
+    animation-duration: 500ms;
+}
+
+.toggledrev #menu-toggle
+{
+    animation-name: anim-sidebar-tab-rev;
+    animation-duration: 500ms;
+}
+
+.toggled #btn-angle
+{
+    animation-name: anim-menu-arrow;
+    animation-duration: 500ms;
+}
+
+.toggledrev #btn-angle
+{
+    animation-name: anim-menu-arrow-rev;
+    animation-duration: 500ms;
+}
+
+.toggledrev #ctb-nav
+{
+    animation-name: anim-ctb-selector;
+    animation-duration: 500ms;
+}
+/* Sidebar styling */
+.sidebar-nav
+{
+    position: absolute;
+    list-style: none;
+    font-family: Whitney;
+    padding: 0em;
+    width: 15.5em;
+}
+
+.sidebar-nav li
+{
+    text-indent: 0.625em;
+    line-height: 2.563em;
+    font-style: normal;
+}
+
+.sidebar-nav li a
+{
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar-nav li a:hover
+{
+    background: #5767a0;
+}
+
+.nav-heading
+{
+    padding: 0.313em;
+    font-size: 2.5em;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#ctb-nav
+{
+    list-style: none;
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+
+.ctb-toggled li
+{
+    display: none;
+    animation-name: anim-ctb;
+    animation-duration: 1s;
+}
+
+i
+{
+    text-decoration: none;
+}
+
+.sidebar-tab
+{
+    text-decoration: none;
+    color: white;
+    background-color: #7d93e5;
+    display: block;
+    width: 4em;
+    height: 4em;
+    text-align: center;
+    border-radius: 0em 2em 2em 0em;
+}
+
+.btn-active
+{
+    margin-left: 15em;
+    position: absolute;
+}
+
+.mining
+{
+    margin-left: 0.938em;
+    margin-right: 0.938em;
+    margin-top: 4.938em;
+    background-color: #4A6F96;
+}
+
+.jumbotron h1
+{
+    padding-bottom: 0.325em;
+}
+
+.fighting
+{
+    margin-left: 0.938em;
+    margin-right: 0.938em;
+    margin-top: 4.938em;
+    background-color: #4A6F96;
+}
+
+.trips
+{ 
+    margin-left: 0.938em;
+    margin-right: 0.938em;
+    margin-top: 4.938em;
+    background-color: #4A6F96;
+}
+
+.wallets
+{
+    margin-left: 0.938em;
+    margin-right: 0.938em;
+    margin-top: 0.938em;
+    background-color: #4A6F96;
+}
+
+.sidebar-tab:link
+{
+    color: white;
+}
+
+.sidebar-tab:visited
+{
+    color: white;
+}
+
+.sidebar-tab:hover
+{
+    color: white;
+}
+
+.sidebar-tab:active
+{
+    color: white;
+}
+
+#sidebar {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    width: 15.5em;
+    top: 1.5em;
+    bottom: 1.5em;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+/* Animation */
+@keyframes anim-sidebar {
+    from {width: 0em;}
+    to {width: 15.5em;}
+}
+
+@keyframes anim-sidebar-rev {
+    from {width: 15.5em;}
+    to {width: 0em;}
+}
+
+@keyframes anim-sidebar-tab {
+    from {margin-left: 0em;}
+    to {margin-left: 15.5em;}
+}
+
+@keyframes anim-sidebar-tab-rev{
+    from {margin-left: 15.5em;}
+    to {margin-left: 0em;}
+}
+
+@keyframes anim-menu-arrow {
+    from {transform: rotate(180deg);}
+    to {transform: rotate(0deg);}
+}
+
+@keyframes anim-menu-arrow-rev {
+    from {transform: rotate(180deg);}
+    to {transform: rotate(0deg);}
+}
+
+@keyframes anim-ctb-selector {
+    from {font-size: 1em}
+    to {font-size: 0em;}
+}
+
+
